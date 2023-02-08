@@ -11,6 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
+        {/* MENU FILTER */}
         <div className="left">
           <div className="item">
             <img src="/img/en.png" alt="US/UK" />
@@ -36,9 +37,13 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+
+        {/* LOGO */}
         <div className="center">
           <Link to="/">MyStore</Link>
         </div>
+
+        {/* NAVIGATION */}
         <div className="right">
           <div className="item">
             <Link className="link" to="/">
