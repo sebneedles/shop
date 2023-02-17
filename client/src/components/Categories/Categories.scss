@@ -39,6 +39,7 @@
       text-transform: uppercase;
       font-weight: 500;
       transition: all 0.3s ease;
+      color: #2879fe;
 
       &:hover {
         background-color: #2879fe;
@@ -50,6 +51,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 0.3s ease-out;
+      opacity: 1;
+      background-color: #333;
     }
   }
 }

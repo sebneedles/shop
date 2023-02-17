@@ -6,7 +6,7 @@ import './Products.scss';
 
 const Products = () => {
   const catId = parseInt(useParams().id);
-  const [maxPrice, setMaxPrice] = useState(1000);
+  const [maxPrice, setMaxPrice] = useState(200);
   const [sort, setSort] = useState('desc'); //(null)
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
@@ -31,7 +31,7 @@ const Products = () => {
     <div className="products">
       <div className="left">
         <div className="filterItem">
-          <h2>Product Categories</h2>
+          <h2>Catégories de produits</h2>
           {data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input
@@ -45,20 +45,20 @@ const Products = () => {
           ))}
         </div>
         <div className="filterItem">
-          <h2>Filter by price</h2>
+          <h2>Filtrer par prix</h2>
           <div className="inputItem">
             <span>0</span>
             <input
               type="range"
               min={0}
-              max={1000}
+              max={200}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
             <span>{maxPrice}</span>
           </div>
         </div>
         <div className="filterItem">
-          <h2>Sort by</h2>
+          <h2>Trier par</h2>
           <div className="inputItem">
             <input
               type="radio"
@@ -67,7 +67,7 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort('asc')}
             />
-            <label htmlFor="asc">Price (Lowest first)</label>
+            <label htmlFor="asc">Prix (Le plus bas)</label>
           </div>
           <div className="inputItem">
             <input
@@ -77,16 +77,17 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort('desc')}
             />
-            <label htmlFor="desc">Price (Highest first)</label>
+            <label htmlFor="desc">Prix (Le plus haut)</label>
           </div>
         </div>
       </div>
       <div className="right">
-        <img
+        <h1>Votre sélection d'articles</h1>
+        {/* <img
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="cat img"
           className="catImg"
-        />
+        /> */}
         <List
           catId={catId}
           maxPrice={maxPrice}

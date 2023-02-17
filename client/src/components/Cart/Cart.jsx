@@ -15,7 +15,7 @@ const Cart = () => {
   };
   return (
     <div className="cart">
-      <h1>Product in your cart</h1>
+      <h1>Produit(s) dans votre panier</h1>
       {products?.map((item) => (
         <div className="item" key={item.id}>
           <Link to={`/product/${item.id}`}>
@@ -25,25 +25,26 @@ const Cart = () => {
             />
           </Link>
           <div className="details">
-            <h1>{item.title}</h1>
-            <p>{item.desc?.substring(0, 100)}</p>
+            <h3>{item.title}</h3>
+            <p>{item.desc?.substring(0, 10) + '...'}</p>
             <div className="price">
-              {item.quantity} x ${item.price}
+              {item.quantity} x {item.price} €
             </div>
           </div>
           <DeleteOutlinedIcon
+            titleAccess="Supprimer l'article"
             className="delete"
             onClick={() => dispatch(removeItem(item.id))}
           />
         </div>
       ))}
+      <hr />
       <div className="total">
-        <span>SUBTOTAL</span>
-        <span>${totalPrice()}</span>
+        <span>TOTAL :</span> <span> {totalPrice()} €</span>
       </div>
-      <button>PROCEED TO CHECKOUT</button>
+      <button>Passer à la caisse</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
-        Reset Cart
+        Réinitialiser le panier
       </span>
     </div>
   );

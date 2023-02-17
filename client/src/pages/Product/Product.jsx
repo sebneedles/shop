@@ -81,7 +81,7 @@ const Product = () => {
                 )
               }
             >
-              <AddShopingCartIcon /> ADD TO CART
+              <AddShopingCartIcon /> AJOUTER AU PANIER
             </button>
             <div className="links">
               <div className="item">

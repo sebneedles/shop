@@ -18,64 +18,66 @@ const Navbar = () => {
       <div className="wrapper">
         {/* MENU FILTER */}
         <div className="left">
-          <div className="item">
-            <img src="/img/en.png" alt="US/UK" />
-            <KeyboardArrowDownIcon />
-          </div>
-          <div className="item">
-            <span>USD</span>
-            <KeyboardArrowDownIcon />
-          </div>
-          <div className="item">
-            <Link className="link" to="/products/1">
-              Women
+          <div className="logo">
+            <div className="flag">
+              <div className="box1"> </div>
+              <div className="box2"> </div>
+              <div className="box3"> </div>
+            </div>
+            <Link to="/">
+              TheFrenchStore<sup>®</sup>
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/products/2">
-              Men
-            </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/products/3">
-              Children
-            </Link>
+            <span></span>
           </div>
         </div>
 
         {/* LOGO */}
         <div className="center">
-          <Link to="/">MyStore</Link>
+          {/* <div className="item">
+            <Link className="link" to="/products/1">
+              Femmes
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/products/2">
+              Hommes
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/products/3">
+              Chaussures
+            </Link>
+          </div> */}
         </div>
 
         {/* NAVIGATION */}
         <div className="right">
           <div className="item">
-            <Link className="link" to="/">
-              Homepage
+            <Link className="link" to="/products/1">
+              Femmes
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/">
-              About
+            <Link className="link" to="/products/2">
+              Hommes
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/">
-              Contact
+            <Link className="link" to="/products/3">
+              Chaussures
             </Link>
           </div>
-          <div className="item">
-            <Link className="link" to="/">
-              Stores
+          {/* <div className="item">
+            <Link className="link" to="/products/4">
+              Accessoires
             </Link>
-          </div>
+          </div> */}
           <div className="icons">
-            <SearchIcon />
-            <PersonOutlineIcon />
-            <FavoriteBorderIcon />
+            {/* <SearchIcon titleAccess="Rechercher" /> */}
+            <PersonOutlineIcon titleAccess="Mon compte" />
+            <FavoriteBorderIcon titleAccess="Mes favoris" />
             <div className="cartIcon" onClick={() => setOpen(!open)}>
-              <AddShoppingCartIcon />
+              <AddShoppingCartIcon titleAccess="Mon panier" />
               <span>{products.length}</span>
             </div>
           </div>

@@ -21,6 +21,9 @@ const Slider = () => {
 
   return (
     <div className="slider">
+      <h1>
+        Votre <span>French boutique</span> en ligne
+      </h1>
       <div
         className="container"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}

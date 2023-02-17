@@ -11,7 +11,7 @@ const FeaturedProducts = ({ type }) => {
   return (
     <div className="featuredProducts">
       <div className="top">
-        <h1>{type} products</h1>
+        <h2>Produits {type}</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro maiores
           distinctio quaerat commodi excepturi voluptatum doloribus, autem, a ut
@@ -22,9 +22,9 @@ const FeaturedProducts = ({ type }) => {
       </div>
       <div className="bottom">
         {error
-          ? 'something went wrong!'
+          ? 'Données manquantes ...'
           : loading
-          ? 'loading'
+          ? 'Chargement ...'
           : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
